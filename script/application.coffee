@@ -11,9 +11,14 @@ initialize = ->
 	[]
 
 field = initialize()
+lastTime = 0
 live = (time) ->
-	field = update field
-	render canvas, time, field
+	delta = time - lastTime
+	if delta != 0
+		field = update field
+		render canvas, delta, field
+		lastTime = time
+
 	requestAnimFrame live, canvas
 
 update = (field) ->
