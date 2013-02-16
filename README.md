@@ -1,3 +1,6 @@
+## Compilation
+    $ coffee -c script/application.coffee
+
 ## Developer server
 
 ### Dependencies
@@ -8,7 +11,6 @@
     $ npm install connect
 
 ### Running the server
-
     $ coffee server.coffee
 
 Visit http://localhost:8088/hell.html
