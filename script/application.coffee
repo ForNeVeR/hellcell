@@ -52,8 +52,8 @@ window.onload = ->
 
 	render = (field) ->
 		image = context.createImageData width, height
-		for x in [0..height - 1]
-				for y in [0..width - 1]
+		for x in [0..width - 1]
+				for y in [0..height - 1]
 					index = (y * height + x) * 4
 					cell = field[y][x]
 					if cell == 0
