@@ -5,16 +5,20 @@ requestAnimFrame = window.requestAnimationFrame ||
 	window.msRequestAnimationFrame ||
 	(callback, element) -> window.setTimeout callback, 1000 / 60
 
+width = 800
+height = 600
+state_count = 3
+
 window.onload = ->
 	canvas = document.getElementById 'canvas'
 	context = canvas.getContext '2d'
 
 	initialize = ->
 		array = []
-		for row_index in [1..800]
+		for row_index in [1..width]
 			row = []
-			for cell_index in [1..600]
-				row.push (Math.floor (Math.random() * 4))
+			for cell_index in [1..height]
+				row.push (Math.floor (Math.random() * state_count))
 			array.push row
 		array
 
@@ -33,24 +37,24 @@ window.onload = ->
 		if delta <= 10
 			false
 		else
-			for x in [1..598]
-				for y in [1..798]
+			for x in [1..height - 2]
+				for y in [1..width - 2]
 					north = field[y - 1][x]
 					west = field[y][x - 1]
 					center = field[x][y]
 					east = field[y][x + 1]
 					south = field[x + 1][x]
 
-					next = (center + 1) % 3
+					next = (center + 1) % state_count
 					if north == next || west == next || east == next || south == next
 						field[x][y] = next
 			true
 
 	render = (field) ->
-		image = context.createImageData 800, 600
-		for x in [0..599]
-				for y in [0..799]
-					index = (y * 800 + x) * 4
+		image = context.createImageData width, height
+		for x in [0..height - 1]
+				for y in [0..width - 1]
+					index = (y * height + x) * 4
 					cell = field[y][x]
 					if cell == 0
 						image.data[index] = 255
