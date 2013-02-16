@@ -2,13 +2,10 @@
 
 This is the simple cellular automata visualizer.
 
-## What is it
-Visit [this URI](script/hell.html). Enjoy!
-
 ## Compilation
     $ coffee -c script/application.coffee
 
-## Developer server
+## Development server
 
 ### Dependencies
 1. Install nodejs.
