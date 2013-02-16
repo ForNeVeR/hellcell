@@ -3,7 +3,7 @@
 This is the simple cellular automata visualizer.
 
 ## What is it
-Visit [this URI](master/src/script/hell.html). Enjoy!
+Visit [this URI](script/hell.html). Enjoy!
 
 ## Compilation
     $ coffee -c script/application.coffee
