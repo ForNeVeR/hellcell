@@ -10,3 +10,7 @@
 ### Running the server
 
     $ coffee server.coffee
+
+Visit http://localhost:8088/hell.html
+
+That's all!
