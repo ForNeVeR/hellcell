@@ -11,8 +11,8 @@ This is the simple cellular automata visualizer.
 1. Install nodejs.
 2. Install the following modules:
 
-    $ npm install coffee --global
-    $ npm install connect
+		$ npm install coffee --global
+		$ npm install connect
 
 ### Running the server
     $ coffee server.coffee
@@ -21,7 +21,7 @@ Visit http://localhost:8088/hell.html
 
 That's all!
 
-## Blah
+## License
 
 Copyright (c) 2013 F. von Never
 
