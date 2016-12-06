@@ -1,6 +1,6 @@
 # hellcell
 
-This is the simple cellular automata visualizer.
+This is the simple cellular automata visualizer. Inspired by [this post](https://habrahabr.ru/post/168291/).
 
 ## Compilation
     $ coffee -c script/application.coffee
